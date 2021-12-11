@@ -1,10 +1,11 @@
-package com.company;
+package com.company.task2;
+
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main {
+public class Solution {
 
     public static void main(String[] args) {
         // write your code here
@@ -16,7 +17,7 @@ public class Main {
             a = Float.parseFloat(reader.readLine());
             b = Float.parseFloat(reader.readLine());
             c = Float.parseFloat(reader.readLine());
-            System.out.println(equation(a,b,c));
+            System.out.println(equation(a, b, c));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -24,8 +25,9 @@ public class Main {
 
     }
 
+
     static float equation(float a, float b, float c) {
-        return ((a - 3) * b / 2) + c;
+        return (float) ((b + Math.sqrt(Math.pow(b, 2) + a * c)) / (2 * a) - Math.pow(a, 3) * c + 1 / Math.pow(b, 2));
     }
 
 }
