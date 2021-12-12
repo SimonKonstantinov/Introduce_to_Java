@@ -1,32 +1,29 @@
-package com.company.task5;
+package com.company.LinearAlgoritmes.task6;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.text.DecimalFormat;
 
 public class Solution {
 
     public static void main(String[] args) {
         // write your code here
         int x;
-
+        int y;
 
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
 
             x = Integer.parseInt(reader.readLine());
-            System.out.println(equation(x));
+            y = Integer.parseInt(reader.readLine());
+            System.out.println(belongsFigure(x, y));
 
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    static String equation(int x) {
-        int hours = x / 3600;
-        int minute = (x % 3600) / 60;
-        int seconds = (x % 3600) % 60;
+    static boolean belongsFigure(int x, int y) {
+        return ((x >= -4 && x <= 4) && (y >= -3 && y <= 0)) || ((x >= -2 && x <= 2) && (y >= 0 && y <= 4));
 
-        return String.format("%02dч:%02dмин:%02dс", hours, minute, seconds);
     }
 }

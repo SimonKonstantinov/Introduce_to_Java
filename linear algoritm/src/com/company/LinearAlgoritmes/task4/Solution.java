@@ -1,22 +1,22 @@
-package com.company.task3;
+package com.company.LinearAlgoritmes.task4;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.text.DecimalFormat;
 
 public class Solution {
 
     public static void main(String[] args) {
         // write your code here
         double x;
-        double y;
+
 
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
 
             x = Double.parseDouble(reader.readLine());
-            y = Double.parseDouble(reader.readLine());
+            System.out.println(equation(x));
 
-            System.out.println(equation(x,y));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -24,8 +24,11 @@ public class Solution {
 
     }
 
-    static double equation(double x, double y) {
-        return ((Math.sin(x)+Math.cos(y))/(Math.cos(x)-Math.sin(y))) * Math.tan(x*y);
+    static String equation(double x) {
+        DecimalFormat df = new DecimalFormat("#.###");
+        String value = df.format(x);
+        String[] words = value.split(",");
+        return words[1] + "." + words[0];
     }
 
 }

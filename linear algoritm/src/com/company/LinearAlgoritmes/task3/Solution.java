@@ -1,4 +1,4 @@
-package com.company.task1;
+package com.company.LinearAlgoritmes.task3;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,15 +8,15 @@ public class Solution {
 
     public static void main(String[] args) {
         // write your code here
-        float a;
-        float b;
-        float c;
+        double x;
+        double y;
+
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
 
-            a = Float.parseFloat(reader.readLine());
-            b = Float.parseFloat(reader.readLine());
-            c = Float.parseFloat(reader.readLine());
-            System.out.println(equation(a,b,c));
+            x = Double.parseDouble(reader.readLine());
+            y = Double.parseDouble(reader.readLine());
+
+            System.out.println(equation(x,y));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -24,8 +24,8 @@ public class Solution {
 
     }
 
-    static float equation(float a, float b, float c) {
-        return ((a - 3) * b / 2) + c;
+    static double equation(double x, double y) {
+        return ((Math.sin(x)+Math.cos(y))/(Math.cos(x)-Math.sin(y))) * Math.tan(x*y);
     }
 
 }

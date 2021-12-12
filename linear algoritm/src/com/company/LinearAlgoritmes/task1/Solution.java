@@ -1,5 +1,4 @@
-package com.company.task2;
-
+package com.company.LinearAlgoritmes.task1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -17,7 +16,7 @@ public class Solution {
             a = Float.parseFloat(reader.readLine());
             b = Float.parseFloat(reader.readLine());
             c = Float.parseFloat(reader.readLine());
-            System.out.println(equation(a, b, c));
+            System.out.println(equation(a,b,c));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -25,9 +24,8 @@ public class Solution {
 
     }
 
-
     static float equation(float a, float b, float c) {
-        return (float) ((b + Math.sqrt(Math.pow(b, 2) + a * c)) / (2 * a) - Math.pow(a, 3) * c + 1 / Math.pow(b, 2));
+        return ((a - 3) * b / 2) + c;
     }
 
 }
