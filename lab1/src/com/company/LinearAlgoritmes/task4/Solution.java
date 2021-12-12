@@ -30,3 +30,4 @@ public class Solution {
         String[] words = value.split(",");
         return words[1] + "." + words[0];
     }
+}

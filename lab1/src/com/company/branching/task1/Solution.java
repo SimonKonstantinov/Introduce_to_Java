@@ -1,4 +1,4 @@
-package com.company.branching.task1;
+package com.company.com.company.branching.task1;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
