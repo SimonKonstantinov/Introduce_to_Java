@@ -1,2 +1,2 @@
-module linear.algoritm {
+module lab1 {
 }
