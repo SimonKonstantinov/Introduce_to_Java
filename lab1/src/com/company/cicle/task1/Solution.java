@@ -1,4 +1,4 @@
-package com.company.com.company.cicle.task1;
+package com.company.cicle.task1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -24,12 +24,11 @@ public class Solution {
     }
 
     private static int equation(int x) {
-        int sum =0;
-        for(int i=0;i<=x;i++)
-        {
-            sum+=i;
+        int sum = 0;
+        for (int i = 1; i <= x; i++) {
+            sum += i;
         }
-return sum;
+        return sum;
     }
 
 
